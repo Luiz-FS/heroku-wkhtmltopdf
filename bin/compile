@@ -1,9 +1,5 @@
 #!/bin/bash
 
-DIST_VERSION=$(lsb_release -c | awk '{print $2}');
+BUILD_DIR=$1;
 
-wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.$(echo $DIST_VERSION)_amd64.deb
-
-dpkg -i wkhtmltox_0.12.5-1.$(echo $DIST_VERSION)_amd64.deb
-apt-get -f install
-rm wkhtmltox_0.12.5-1.$(echo $DIST_VERSION)_amd64.deb
+ln $BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf $BUILD_DIR/.apt/usr/bin;
