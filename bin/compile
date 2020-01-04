@@ -2,4 +2,4 @@
 
 BUILD_DIR=$1;
 
-ln -s $BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf $BUILD_DIR/.apt/usr/bin;
+ln $BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf $BUILD_DIR/.apt/usr/bin;
